@@ -1,0 +1,1 @@
+Vercel에서 folder를 눌러 이 madang-final 폴더 전체를 업로드하세요.
