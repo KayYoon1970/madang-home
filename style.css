@@ -11,7 +11,7 @@ img{width:100%;height:100%;object-fit:cover;display:block}
 .nav .active{color:var(--burgundy);border-bottom:2px solid var(--burgundy);padding-bottom:8px}
 .soon-outline{border:1px solid #8f8c87;color:#66635f;border-radius:5px;padding:12px 18px}
 .menu-toggle{display:none;border:0;background:none;font-size:25px}
-.hero{height:402px;background:url('assets/hero.jpg') center/cover no-repeat;position:relative}
+.hero{height:402px;background:url('images/hero.jpg') center/cover no-repeat;position:relative}
 .overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.08) 70%)}
 .hero-copy{position:relative;color:white;padding:70px 0 0 54px}
 .hero h1{font:700 55px/1.05 "Playfair Display",serif;margin:0 0 18px}
@@ -26,11 +26,7 @@ h2{font:700 25px/1.25 "Playfair Display",serif;margin:0}
 .tool-card p{font-size:12px;line-height:1.8;margin:18px 0 0}
 .arrow{position:absolute;right:22px;bottom:18px;color:var(--burgundy);font-size:28px}
 .coming{position:absolute;right:36px;bottom:20px;border:1px solid #8d8a86;color:var(--gray);border-radius:4px;padding:8px 17px;font-size:11px;font-weight:700;letter-spacing:.8px}
-.meokgu{width:54px;height:54px;border-radius:46% 46% 45% 45%;background:#050505;position:relative}
-.meokgu:before,.meokgu:after{content:'';position:absolute;top:21px;width:6px;height:6px;border:2px solid white;border-radius:50%}
-.meokgu:before{left:13px}.meokgu:after{right:13px}
-.meokgu span:before{content:'';position:absolute;top:-8px;left:23px;width:8px;height:8px;background:#d4162e;transform:rotate(45deg);border-radius:0 5px 0 5px}
-.meokgu span:after{content:'';position:absolute;left:21px;top:35px;width:12px;height:6px;border-bottom:2px solid white;border-radius:50%}
+.name-symbol{width:54px;height:54px;border:3px solid var(--green);border-radius:8px;display:grid;place-items:center;font-family:"Playfair Display",serif;font-size:30px;font-weight:700;color:var(--green)}
 .speech{width:54px;height:54px;border:3px solid var(--green);border-radius:50%;position:relative}
 .speech:after{content:'';position:absolute;left:8px;bottom:-6px;width:16px;height:16px;border-left:3px solid var(--green);transform:skew(-30deg)}
 .symbol{width:54px;height:54px;border:3px solid var(--green);border-radius:8px;display:grid;place-items:center;font-size:31px}
