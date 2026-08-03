@@ -772,3 +772,19 @@ margin:15px 0 30px;
         gap:18px;
     }
 }
+.story-read-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--burgundy);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    border-bottom: 1px solid var(--burgundy);
+    padding-bottom: 4px;
+    transition: 0.2s ease;
+}
+
+.story-read-link:hover {
+    transform: translateX(4px);
+}
