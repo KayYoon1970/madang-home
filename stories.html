@@ -40,17 +40,17 @@
 
     </section>
 <section class="story-categories">
-    <button class="category-button active" type="button">All</button>
-    <button class="category-button" type="button">Food & Drink</button>
-    <button class="category-button" type="button">Culture</button>
-    <button class="category-button" type="button">Travel</button>
-    <button class="category-button" type="button">Local Life</button>
-    <button class="category-button" type="button">K-Vibe</button>
+    <button class="category-button active" type="button" data-filter="all">All</button>
+    <button class="category-button" type="button" data-filter="food">Food & Drink</button>
+    <button class="category-button" type="button" data-filter="culture">Culture</button>
+    <button class="category-button" type="button" data-filter="travel">Travel</button>
+    <button class="category-button" type="button" data-filter="local">Local Life</button>
+    <button class="category-button" type="button" data-filter="kvibe">K-Vibe</button>
 </section>
 <section class="stories-grid">
 
  <article class="story-card" data-category="travel">
-    <img src="assets/temple-lanterns.jpg" alt="A Korean temple above the East Sea">
+    <img src="assets/naksansa-east-sea.jpg" alt="A Korean temple above the East Sea">
 
     <div class="story-card-body">
         <span class="story-category">Travel</span>
@@ -75,10 +75,10 @@
 
 
 <article class="story-card" data-category="travel">
-    <img src="assets/local-flavors.jpg" alt="Food at a Korean highway rest stop">
+    <img src="assets/korean-rest-stop.jpg" alt="Food at a Korean highway rest stop">
 
     <div class="story-card-body">
-        <span class="story-category">Road Trip</span>
+        <span class="story-category">Travel</span>
 
         <h2>Why Korean Highway Rest Stops Are Worth Visiting</h2>
 
@@ -90,21 +90,23 @@
         <small>Curated by Flo</small>
 
         <a class="story-read-link"
-         href="https://realkoreawithflo.blogspot.com/2026/07/why-korean-highway-rest-stops-are-worth-visiting.html" 
+         href="https://realkoreawithflo.blogspot.com/2026/07/why-korean-highway-rest-stops-are-worth.html"
            target="_blank"
            rel="noopener noreferrer">
             Read Story →
         </a>
     </div>
 </article>
-        <img src="assets/korean-nights.jpeg" alt="Korean street at night">
-        <div class="story-card-body">
-            <span class="story-category">Local Life</span>
-            <h2>Where Korea Really Comes Alive</h2>
-            <p>Neon streets, late dinners, and the rhythm of everyday nights.</p>
-            <small>Curated by Flo</small>
-        </div>
-    </article>
+
+<article class="story-card" data-category="local">
+    <img src="assets/korean-nights.jpeg" alt="Korean street at night">
+    <div class="story-card-body">
+        <span class="story-category">Local Life</span>
+        <h2>Where Korea Really Comes Alive</h2>
+        <p>Neon streets, late dinners, and the rhythm of everyday nights.</p>
+        <small>Curated by Flo</small>
+    </div>
+</article>
 
 </section>
 </main>
@@ -134,6 +136,9 @@
     </div>
 
 </footer>
+
+<script src="script.js"></script>
+
 </body>
 
 </html>
