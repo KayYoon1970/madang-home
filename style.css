@@ -1760,3 +1760,131 @@ margin:15px 0 30px;
     font-size: 32px !important;
   }
 }
+
+
+/* =========================
+   FINAL TYPOGRAPHY POLISH
+========================= */
+
+/* Main section title: slightly larger */
+#stories .stories-copy h2 {
+  font-family: "Playfair Display", serif !important;
+  font-size: 44px !important;
+  line-height: 1.04 !important;
+  font-weight: 700 !important;
+  color: #2f3432 !important;
+}
+
+/* Secondary section title: 3px smaller */
+#tools .section-title h2 {
+  font-family: "Playfair Display", serif !important;
+  font-size: 41px !important;
+  line-height: 1.06 !important;
+  font-weight: 700 !important;
+  color: #2f3432 !important;
+}
+
+/* Card titles in both sections: same dark gray */
+#home-blog-feed .story-body h3,
+#home-blog-feed .story-card:first-child h3,
+#tools .tool-card h3 {
+  color: #2f3432 !important;
+}
+
+/* Keep the hierarchy on smaller screens */
+@media (max-width: 980px) {
+  #stories .stories-copy h2 {
+    font-size: 38px !important;
+  }
+
+  #tools .section-title h2 {
+    font-size: 35px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  #stories .stories-copy h2 {
+    font-size: 34px !important;
+  }
+
+  #tools .section-title h2 {
+    font-size: 31px !important;
+  }
+}
+
+
+/* =========================
+   LOCAL TOOLS — FINAL BALANCE
+========================= */
+
+/* Lift the Local Tools heading block slightly and keep it aligned with the cards. */
+#tools .section-title {
+  transform: translateY(-10px);
+}
+
+/* Give tool cards a little more height so the section balances with Stories. */
+#tools .tool-card {
+  min-height: 232px !important;
+  padding: 30px !important;
+}
+
+/* Refine typography inside tool cards. */
+#tools .tool-card h3 {
+  font-size: 19px !important;
+  line-height: 1.18 !important;
+  margin-bottom: 12px !important;
+}
+
+#tools .tool-card p {
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+}
+
+/* Keep icons and arrows visually proportional. */
+#tools .tool-card .symbol {
+  margin-bottom: 18px !important;
+}
+
+#tools .tool-card .arrow {
+  right: 20px !important;
+  bottom: 18px !important;
+}
+
+/* Slightly reduce the visual gap above the tools section. */
+#tools {
+  padding-top: 52px !important;
+}
+
+/* Mobile/tablet: remove the lift and keep cards comfortable. */
+@media (max-width: 980px) {
+  #tools .section-title {
+    transform: none;
+  }
+
+  #tools .tool-card {
+    min-height: 210px !important;
+  }
+}
+
+
+/* =========================
+   MADANG FINAL BRAND COPY
+========================= */
+
+/* Match the gray used by the MADANG wordmark. */
+#stories .stories-copy h2 {
+  color: #6b6b6b !important;
+}
+
+#tools .section-title h2 {
+  color: #6b6b6b !important;
+  font-size: 41px !important;
+  line-height: 1.06 !important;
+}
+
+/* Keep card titles in a clear dark gray. */
+#home-blog-feed .story-body h3,
+#home-blog-feed .story-card:first-child h3,
+#tools .tool-card h3 {
+  color: #343837 !important;
+}
