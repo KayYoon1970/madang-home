@@ -775,8 +775,9 @@ margin:15px 0 30px;
 }
 
 .footer-links a {
-    color: #f5f1e8;
+    color: #8d7f73;
     font-size: 14px;
+    font-weight: 500;
     text-decoration: none;
 }
 
@@ -885,4 +886,877 @@ margin:15px 0 30px;
     .footsteps {
         width: calc(100% - 40px);
     }
+}
+
+/* Blogger RSS / JSONP automatic story cards */
+.story-img {
+  display: block;
+  color: inherit;
+}
+
+.story-body h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.story-body p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+.home-story-link,
+.story-read-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--burgundy);
+  font-weight: 700;
+}
+
+#all-blog-feed .story-card > a {
+  display: block;
+}
+
+#all-blog-feed .story-card > a img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+#all-blog-feed .story-card-body h2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+
+/* HD Blogger feed cards */
+#home-blog-feed {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+#home-blog-feed .story-card {
+  min-width: 0;
+}
+
+#home-blog-feed .story-img img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  image-rendering: auto;
+}
+
+@media (max-width: 980px) {
+  #home-blog-feed {
+    grid-template-columns: 1fr;
+  }
+
+  #home-blog-feed .story-img img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+
+/* =========================
+   HOME — TOOLS + STORIES UNIFIED
+========================= */
+
+/* Both homepage sections share one visual width. */
+#tools,
+#stories {
+  width: min(1160px, calc(100% - 80px));
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tools: four equal cards. */
+#tools .tool-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+#tools .tool-card {
+  min-height: 214px;
+  padding: 30px;
+  border-radius: 8px;
+  background: transparent;
+}
+
+/* Stories: heading column + three equal post cards. */
+#stories {
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#home-blog-feed {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px;
+  align-items: stretch;
+}
+
+#home-blog-feed .story-card,
+#home-blog-feed .story-card:first-child {
+  display: flex !important;
+  flex-direction: column;
+  grid-column: auto !important;
+  min-width: 0;
+  min-height: 410px;
+  border-radius: 8px;
+  background: transparent;
+}
+
+#home-blog-feed .story-img,
+#home-blog-feed .story-card:first-child .story-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+}
+
+#home-blog-feed .story-img img,
+#home-blog-feed .story-card:first-child .story-img img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+}
+
+#home-blog-feed .story-body,
+#home-blog-feed .story-card:first-child .story-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+#home-blog-feed .story-body h3,
+#home-blog-feed .story-card:first-child h3 {
+  min-height: 66px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.12;
+}
+
+#home-blog-feed .story-body p {
+  min-height: 88px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+#home-blog-feed .story-body small {
+  margin-top: auto;
+}
+
+#home-blog-feed .home-story-link {
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+/* Featured layout belongs only to the full Stories page, not the homepage. */
+#all-blog-feed .story-card:first-child {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+}
+
+#all-blog-feed .story-card:first-child img {
+  height: 100%;
+  min-height: 360px;
+}
+
+#all-blog-feed .story-card:first-child .story-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 36px;
+}
+
+#all-blog-feed .story-card:first-child h2 {
+  font-size: 38px;
+  line-height: 1.12;
+}
+
+@media (max-width: 980px) {
+  #tools,
+  #stories {
+    width: min(760px, calc(100% - 40px));
+  }
+
+  #tools .tool-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #stories {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  #home-blog-feed {
+    grid-template-columns: 1fr !important;
+  }
+
+  #home-blog-feed .story-card,
+  #home-blog-feed .story-card:first-child {
+    min-height: 0;
+  }
+
+  #home-blog-feed .story-img,
+  #home-blog-feed .story-card:first-child .story-img {
+    aspect-ratio: 16 / 10;
+  }
+
+  #all-blog-feed .story-card:first-child {
+    grid-column: auto;
+    display: block;
+  }
+
+  #all-blog-feed .story-card:first-child img {
+    min-height: 0;
+    height: 220px;
+  }
+
+  #all-blog-feed .story-card:first-child h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  #tools .tool-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================
+   HOME — SECTION TITLES UNIFIED
+========================= */
+
+/* Same overall content width for Tools and Stories. */
+#tools,
+#stories {
+  width: min(1160px, calc(100% - 80px)) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Make the section headings feel like one system. */
+#tools .section-title,
+#stories .stories-copy {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#tools .section-title .eyebrow,
+#stories .stories-copy .eyebrow {
+  margin-bottom: 12px;
+}
+
+#tools .section-title h2,
+#stories .stories-copy h2 {
+  margin: 0;
+  font-size: clamp(34px, 3vw, 46px);
+  line-height: 1.05;
+  max-width: 360px;
+}
+
+/* Add a matching burgundy action button under the Tools heading. */
+#tools .section-title::after {
+  content: "EXPLORE TOOLS →";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  margin-top: 24px;
+  padding: 0 26px;
+  border-radius: 4px;
+  background: var(--burgundy);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+/* Keep Stories button visually identical. */
+#stories .stories-copy .button,
+#stories .stories-copy a.button {
+  min-height: 50px;
+  padding: 0 26px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+/* Equal spacing between headings and card areas. */
+#tools .tool-grid {
+  margin-top: 34px;
+}
+
+#stories {
+  padding-top: 84px;
+}
+
+#stories .stories-copy {
+  padding-top: 0;
+}
+
+/* Desktop: align the left edges of both section headings. */
+@media (min-width: 981px) {
+  #tools {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 48px;
+    align-items: start;
+  }
+
+  #tools .section-title {
+    grid-column: 1;
+  }
+
+  #tools .tool-grid {
+    grid-column: 2;
+    margin-top: 0;
+  }
+
+  #stories {
+    grid-template-columns: 220px minmax(0, 1fr) !important;
+    gap: 48px !important;
+  }
+}
+
+@media (max-width: 980px) {
+  #tools,
+  #stories {
+    width: min(760px, calc(100% - 40px)) !important;
+  }
+
+  #tools {
+    display: block;
+  }
+
+  #tools .section-title,
+  #stories .stories-copy {
+    min-height: 0;
+  }
+
+  #tools .section-title::after {
+    margin-bottom: 28px;
+  }
+
+  #tools .tool-grid {
+    margin-top: 0;
+  }
+}
+
+
+/* =========================
+   HOME FINAL — STORIES FIRST
+========================= */
+
+#stories,
+#tools {
+  width: min(1180px, calc(100% - 80px)) !important;
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Both sections use the same left heading column and the same content width. */
+#stories,
+#tools {
+  display: grid !important;
+  grid-template-columns: 230px minmax(0, 1fr) !important;
+  gap: 50px !important;
+  align-items: start !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+#stories {
+  padding-top: 72px !important;
+  padding-bottom: 72px !important;
+}
+
+#tools {
+  padding-top: 58px !important;
+  padding-bottom: 84px !important;
+  border-top: 1px solid rgba(122, 15, 45, 0.16);
+}
+
+/* Left-side section headings */
+#stories .stories-copy,
+#tools .section-title {
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  padding: 0 !important;
+}
+
+#stories .stories-copy .eyebrow,
+#tools .section-title .eyebrow {
+  margin: 0 0 16px !important;
+}
+
+#stories .stories-copy h2,
+#tools .section-title h2 {
+  margin: 0 !important;
+  max-width: 220px !important;
+  font-size: 42px !important;
+  line-height: 1.05 !important;
+}
+
+/* Real button in Stories */
+#stories .stories-copy .button,
+#stories .stories-copy a.button {
+  min-height: 52px !important;
+  margin-top: 26px !important;
+  padding: 0 28px !important;
+  border-radius: 4px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: .02em !important;
+}
+
+/* Matching visual button under Tools heading */
+#tools .section-title::after {
+  content: "EXPLORE TOOLS →" !important;
+  min-height: 52px !important;
+  margin-top: 26px !important;
+  padding: 0 28px !important;
+  border-radius: 4px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: var(--burgundy) !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: .02em !important;
+}
+
+/* Stories: three equal cards */
+#home-blog-feed {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+}
+
+#home-blog-feed .story-card,
+#home-blog-feed .story-card:first-child {
+  display: flex !important;
+  flex-direction: column !important;
+  grid-column: auto !important;
+  min-width: 0 !important;
+  min-height: 540px !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+#home-blog-feed .story-img,
+#home-blog-feed .story-card:first-child .story-img {
+  width: 100% !important;
+  aspect-ratio: 4 / 3 !important;
+  min-height: 0 !important;
+}
+
+#home-blog-feed .story-img img,
+#home-blog-feed .story-card:first-child .story-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+#home-blog-feed .story-body,
+#home-blog-feed .story-card:first-child .story-body {
+  display: flex !important;
+  flex: 1 !important;
+  flex-direction: column !important;
+  padding: 22px !important;
+}
+
+#home-blog-feed .story-body h3,
+#home-blog-feed .story-card:first-child h3 {
+  min-height: 76px !important;
+  margin: 0 0 14px !important;
+  font-size: 23px !important;
+  line-height: 1.12 !important;
+}
+
+#home-blog-feed .story-body p {
+  min-height: 112px !important;
+  margin: 0 0 18px !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+}
+
+#home-blog-feed .story-body small {
+  margin-top: auto !important;
+}
+
+#home-blog-feed .home-story-link {
+  margin-top: 8px !important;
+}
+
+/* Tools: four equal cards matching the same content width */
+#tools .tool-grid {
+  grid-column: 2 !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  margin-top: 0 !important;
+}
+
+#tools .tool-card {
+  min-height: 210px !important;
+  padding: 28px !important;
+  border-radius: 8px !important;
+}
+
+/* Keep tool card title hierarchy coherent with post cards */
+#tools .tool-card h3 {
+  font-size: 20px !important;
+  line-height: 1.15 !important;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  #stories,
+  #tools {
+    width: min(760px, calc(100% - 40px)) !important;
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  #stories .stories-copy h2,
+  #tools .section-title h2 {
+    max-width: 100% !important;
+    font-size: 36px !important;
+  }
+
+  #home-blog-feed {
+    grid-template-columns: 1fr !important;
+  }
+
+  #home-blog-feed .story-card,
+  #home-blog-feed .story-card:first-child {
+    min-height: 0 !important;
+  }
+
+  #tools .tool-grid {
+    grid-column: 1 !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  #stories,
+  #tools {
+    width: min(100% - 28px, 620px) !important;
+  }
+
+  #tools .tool-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #stories .stories-copy h2,
+  #tools .section-title h2 {
+    font-size: 32px !important;
+  }
+}
+
+
+/* =========================
+   FINAL MOCKUP MATCH
+   Force Local Tools to mirror Local Stories
+========================= */
+
+@media (min-width: 981px) {
+  #tools {
+    display: grid !important;
+    grid-template-columns: 230px minmax(0, 1fr) !important;
+    column-gap: 50px !important;
+    row-gap: 0 !important;
+    align-items: start !important;
+  }
+
+  #tools .section-title {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 230px !important;
+    max-width: 230px !important;
+    min-width: 230px !important;
+    align-self: start !important;
+    justify-self: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #tools .section-title .eyebrow {
+    margin: 0 0 16px 0 !important;
+    text-align: left !important;
+  }
+
+  #tools .section-title h2 {
+    width: 230px !important;
+    max-width: 230px !important;
+    margin: 0 !important;
+    text-align: left !important;
+    font-size: 42px !important;
+    line-height: 1.05 !important;
+  }
+
+  #tools .section-title::after {
+    content: "EXPLORE TOOLS →" !important;
+    margin-top: 26px !important;
+    align-self: flex-start !important;
+  }
+
+  #tools .tool-grid {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    align-self: start !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+  }
+
+  #tools .tool-card {
+    min-width: 0 !important;
+    min-height: 210px !important;
+    padding: 28px !important;
+  }
+}
+
+/* Match both left-side headings exactly */
+#stories .stories-copy,
+#tools .section-title {
+  box-sizing: border-box !important;
+}
+
+#stories .stories-copy h2,
+#tools .section-title h2 {
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  letter-spacing: inherit !important;
+}
+
+/* Keep cards visually aligned with the mockup */
+#tools .tool-card h3 {
+  font-size: 18px !important;
+  line-height: 1.15 !important;
+  margin-top: 0 !important;
+}
+
+#tools .tool-card p {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+}
+
+@media (max-width: 980px) {
+  #tools .section-title {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  #tools .section-title h2 {
+    text-align: left !important;
+    max-width: 100% !important;
+  }
+}
+
+
+/* =========================
+   FINAL FIX — MATCH APPROVED MOCKUP
+========================= */
+
+/* Use the same serif face and scale for both section titles. */
+#stories .stories-copy h2,
+#tools .section-title h2 {
+  font-family: "Playfair Display", serif !important;
+  font-weight: 700 !important;
+  font-size: 42px !important;
+  line-height: 1.05 !important;
+  letter-spacing: 0 !important;
+  color: var(--green) !important;
+  margin: 0 !important;
+}
+
+/* Same two-column structure, width and top alignment. */
+#stories,
+#tools {
+  width: min(1180px, calc(100% - 80px)) !important;
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: grid !important;
+  grid-template-columns: 230px minmax(0, 1fr) !important;
+  gap: 50px !important;
+  align-items: start !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+#stories {
+  padding-top: 72px !important;
+  padding-bottom: 72px !important;
+}
+
+#tools {
+  padding-top: 58px !important;
+  padding-bottom: 84px !important;
+  border-top: 1px solid rgba(122, 15, 45, 0.16);
+}
+
+#stories .stories-copy,
+#tools .section-title {
+  grid-column: 1 !important;
+  width: 230px !important;
+  min-width: 230px !important;
+  max-width: 230px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+#stories .stories-copy .eyebrow,
+#tools .section-title .eyebrow {
+  margin: 0 0 16px !important;
+}
+
+/* Disable the old pseudo-button and use the real button in HTML. */
+#tools .section-title::after {
+  content: none !important;
+  display: none !important;
+}
+
+#stories .stories-copy .button,
+#tools .section-title .tools-button {
+  min-height: 52px !important;
+  margin-top: 26px !important;
+  padding: 0 28px !important;
+  border-radius: 4px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  align-self: flex-start !important;
+  background: var(--burgundy) !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: .02em !important;
+  white-space: nowrap !important;
+}
+
+/* Right-side card areas start at the same vertical point. */
+#home-blog-feed,
+#tools .tool-grid {
+  grid-column: 2 !important;
+  margin: 0 !important;
+  align-self: start !important;
+}
+
+#tools .tool-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  width: 100% !important;
+}
+
+#tools .tool-card {
+  min-height: 210px !important;
+  padding: 28px !important;
+  border-radius: 8px !important;
+}
+
+#tools .tool-card h3 {
+  font-size: 18px !important;
+  line-height: 1.15 !important;
+}
+
+#tools .tool-card p {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+}
+
+/* Only completed tools show arrows. */
+#tools .tool-card:nth-child(3) .arrow,
+#tools .tool-card:nth-child(4) .arrow {
+  display: none !important;
+}
+
+@media (max-width: 980px) {
+  #stories,
+  #tools {
+    width: min(760px, calc(100% - 40px)) !important;
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  #stories .stories-copy,
+  #tools .section-title {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  #stories .stories-copy h2,
+  #tools .section-title h2 {
+    font-size: 36px !important;
+  }
+
+  #home-blog-feed,
+  #tools .tool-grid {
+    grid-column: 1 !important;
+  }
+
+  #tools .tool-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  #tools .tool-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #stories .stories-copy h2,
+  #tools .section-title h2 {
+    font-size: 32px !important;
+  }
 }
