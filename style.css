@@ -1888,3 +1888,48 @@ margin:15px 0 30px;
 #tools .tool-card h3 {
   color: #343837 !important;
 }
+
+
+/* Mobile Our Footsteps: show all six photos in a compact 3 × 2 grid */
+@media (max-width: 560px) {
+  .footsteps {
+    width: calc(100% - 24px);
+    margin: 24px auto;
+    padding: 28px 12px 24px;
+  }
+
+  .footsteps-title h2 {
+    font-size: 28px;
+  }
+
+  .footsteps-desc {
+    margin: 14px 0 24px;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .footsteps-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px 8px;
+  }
+
+  .footstep {
+    min-width: 0;
+  }
+
+  .footstep img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 7px;
+  }
+
+  .footstep span {
+    margin-top: 7px;
+    font-size: 11px;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+}

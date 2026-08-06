@@ -71,21 +71,48 @@ function getPostText(entry) {
   return stripHtml(entry.summary?.$t || entry.content?.$t || '');
 }
 
+function getStoryCategory(entry) {
+  const title = (entry.title?.$t || '').toLowerCase();
+  const labels = (entry.category || [])
+    .map(item => item.term.toLowerCase())
+    .filter(Boolean);
+  const labelText = labels.join(' ');
+
+  // Keep the three published stories in their intended MADANG categories,
+  // even when older Blogger labels overlap.
+  if (title.includes('hot outside') || title.includes('ice-cold') || title.includes('drink in summer')) {
+    return { label: 'Food & Drink', filter: 'food' };
+  }
+
+  if (title.includes('highway rest stop') || title.includes('rest stops are worth')) {
+    return { label: 'Culture', filter: 'culture' };
+  }
+
+  if (title.includes('moment above the east sea') || title.includes('naksansa')) {
+    return { label: 'Travel', filter: 'travel' };
+  }
+
+  if (labelText.includes('food') || labelText.includes('drink')) {
+    return { label: 'Food & Drink', filter: 'food' };
+  }
+  if (labelText.includes('culture')) return { label: 'Culture', filter: 'culture' };
+  if (labelText.includes('travel')) return { label: 'Travel', filter: 'travel' };
+  if (labelText.includes('k-vibe') || labelText.includes('kvibe')) {
+    return { label: 'K-Vibe', filter: 'kvibe' };
+  }
+  if (labelText.includes('local life') || labelText.includes('local')) {
+    return { label: 'Local Life', filter: 'local' };
+  }
+
+  return { label: 'Local Life', filter: 'local' };
+}
+
 function getPostCategory(entry) {
-  const labels = (entry.category || []).map(item => item.term).filter(Boolean);
-  return labels[0] || 'Local Story';
+  return getStoryCategory(entry).label;
 }
 
 function getFilterCategory(entry) {
-  const labels = (entry.category || [])
-    .map(item => item.term.toLowerCase())
-    .join(' ');
-
-  if (labels.includes('food') || labels.includes('drink')) return 'food';
-  if (labels.includes('culture')) return 'culture';
-  if (labels.includes('travel')) return 'travel';
-  if (labels.includes('k-vibe') || labels.includes('kvibe')) return 'kvibe';
-  return 'local';
+  return getStoryCategory(entry).filter;
 }
 
 function formatDate(value) {
