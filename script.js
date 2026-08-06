@@ -138,10 +138,11 @@ function createHomeCard(entry) {
     <article class="story-card">
       <a class="story-img" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">
         <img src="${escapeHtml(image)}" alt="${escapeHtml(title)}" loading="lazy">
-        <span>${escapeHtml(category.toUpperCase())}</span>
+      
       </a>
 
       <div class="story-body">
+<div class="story-category">${escapeHtml(category)}</div>
         <h3>${escapeHtml(title)}</h3>
         <p>${escapeHtml(description)}</p>
         <small>${escapeHtml(date)}</small>

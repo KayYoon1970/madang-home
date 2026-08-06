@@ -1933,3 +1933,11 @@ margin:15px 0 30px;
     overflow-wrap: anywhere;
   }
 }
+.story-category{
+    font-size:11px;
+    color:#8f8f8f;
+    letter-spacing:0.12em;
+    font-weight:600;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
