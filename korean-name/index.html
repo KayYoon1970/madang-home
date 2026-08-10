@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Discover a Korean name inspired by your birthday, story, and personal style."
+  >
+
+  <title>Discover Your Korean Name | MADANG</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="page">
+
+    <!-- 상단 소개 -->
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <!-- 로고는 이미지가 아니라 글자로 표시 -->
+        <p class="brand-logo">MADANG</p>
+
+        <p class="eyebrow">
+          YOUR KOREAN STYLE BEGINS HERE
+        </p>
+
+        <h1>
+          Discover Your
+          <span>Korean Name</span>
+        </h1>
+
+        <p class="hero-description">
+          A Korean name inspired by your birthday,
+          preferences, and personal style.
+        </p>
+
+      </div>
+
+      <div class="hero-mascot">
+        <div class="mascot-glow"></div>
+
+        <img
+          src="images/meokgu-main.png"
+          alt="Meokgureumkong, the MADANG mascot"
+        >
+        
+      </div>
+
+    </section>
+
+
+    <!-- 입력 카드 -->
+    <form id="nameForm" class="generator-card">
+
+      <!-- 생년월일 -->
+      <fieldset class="form-section">
+
+        <legend>
+          <span class="step-number">1</span>
+
+          <span class="legend-copy">
+            <strong>When is your birthday?</strong>
+
+            <small>
+              Your birth date helps shape your Korean name.
+            </small>
+          </span>
+        </legend>
+
+        <div class="birthday-area">
+
+          <input
+            type="date"
+            id="birthday"
+            name="birthday"
+            class="date-input"
+            required
+          >
+
+          <p class="date-example">
+            e.g. May 20, 1998
+          </p>
+
+        </div>
+
+      </fieldset>
+
+
+      <!-- 성별 -->
+      <fieldset class="form-section">
+
+        <legend>
+          <span class="step-number">2</span>
+
+          <span class="legend-copy">
+            <strong>Choose your gender</strong>
+
+            <small>
+              Select the option that feels right for you.
+            </small>
+          </span>
+        </legend>
+
+        <div class="option-grid gender-options">
+
+          <label class="choice-card">
+            <input
+              type="radio"
+              name="gender"
+              value="female"
+              checked
+            >
+
+            <span>
+              <span class="selected-dot"></span>
+              Female
+            </span>
+          </label>
+
+          <label class="choice-card">
+            <input
+              type="radio"
+              name="gender"
+              value="male"
+            >
+
+            <span>Male</span>
+          </label>
+
+          <label class="choice-card">
+            <input
+              type="radio"
+              name="gender"
+              value="neutral"
+            >
+
+            <span>Neutral</span>
+          </label>
+
+        </div>
+
+      </fieldset>
+
+
+      <!-- 이름 스타일 -->
+      <fieldset class="form-section">
+
+        <legend>
+          <span class="step-number">3</span>
+
+          <span class="legend-copy">
+            <strong>Choose your style</strong>
+
+            <small>
+              What kind of Korean name feels most like you?
+            </small>
+          </span>
+        </legend>
+
+        <div class="option-grid style-options">
+
+          <label class="choice-card">
+            <input
+              type="radio"
+              name="style"
+              value="modern"
+              checked
+            >
+
+            <span>
+              <span class="option-icon">✧</span>
+              Modern
+            </span>
+          </label>
+
+          <label class="choice-card">
+            <input
+              type="radio"
+              name="style"
+              value="traditional"
+            >
+
+            <span>
+              <span class="option-icon">♜</span>
+              Traditional
+            </span>
+          </label>
+
+          <label class="choice-card">
+            <input
+              type="radio"
+              name="style"
+              value="elegant"
+            >
+
+            <span>
+              <span class="option-icon">◇</span>
+              Elegant
+            </span>
+          </label>
+
+          <label class="choice-card">
+            <input
+              type="radio"
+              name="style"
+              value="cute"
+            >
+
+            <span>
+              <span class="option-icon">♡</span>
+              Cute
+            </span>
+          </label>
+
+          <label class="choice-card">
+            <input
+              type="radio"
+              name="style"
+              value="royal"
+            >
+
+            <span>
+              <span class="option-icon">♕</span>
+              Royal
+            </span>
+          </label>
+
+          <label class="choice-card">
+            <input
+              type="radio"
+              name="style"
+              value="kpop"
+            >
+
+            <span>
+              <span class="option-icon">♫</span>
+              K-pop
+            </span>
+          </label>
+
+        </div>
+
+      </fieldset>
+
+
+      <!-- 생성 버튼 -->
+      <div class="button-area">
+
+        <button
+          type="submit"
+          id="generateButton"
+          class="generate-button"
+        >
+
+          <img
+            src="images/meokgu-button.png"
+            alt=""
+            class="button-mascot"
+          >
+
+          <span class="button-text">
+            Discover My Korean Name
+          </span>
+
+          <span class="button-arrow" aria-hidden="true">
+            →
+          </span>
+
+        </button>
+
+        <p class="inspiration-note">
+          Inspired by your story and Korean culture.
+          <span>♥</span>
+        </p>
+
+      </div>
+
+    </form>
+
+
+    <!-- 이름 분석 로딩 -->
+    <section id="loadingCard" class="loading-card hidden" aria-live="polite">
+      <div class="seal-loader" aria-hidden="true">
+        <span>名</span>
+      </div>
+      <p class="loading-eyebrow">MADANG IS CREATING YOUR NAME</p>
+      <h2>Finding the name meant for you</h2>
+      <p id="loadingStatus" class="loading-status">Reading the rhythm of your birthday…</p>
+      <div class="loading-progress" aria-hidden="true">
+        <span id="loadingProgressBar"></span>
+      </div>
+      <p id="loadingRitual" class="loading-ritual">Every Korean name carries a story.</p>
+      <div class="loading-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+    </section>
+
+
+    <!-- 결과 카드 -->
+    <section
+      id="resultCard"
+      class="result-card hidden"
+      aria-live="polite"
+    >
+
+      <div class="result-mascot-area">
+
+        <div class="result-mascot-glow"></div>
+
+        <img
+          src="images/meokgu-result.png"
+          alt="MADANG mascot"
+          class="result-mascot"
+        >
+<span class="mascot-heart heart-one">♥</span>
+<span class="mascot-heart heart-two">♥</span>
+<span class="mascot-heart heart-three">♥</span>
+      </div>
+
+
+      <div class="result-main">
+
+        
+
+        <div class="name-line">
+
+          <h2 id="koreanName">
+            김서윤
+          </h2>
+
+          <p id="romanizedName" class="romanized-name">
+            Kim Seo-yoon
+          </p>
+
+          <button
+            type="button"
+            id="pronounceButton"
+            class="pronounce-button"
+            aria-label="Listen to the name"
+          >
+            ◖))
+          </button>
+
+        </div>
+
+        <p id="nameMeaning" class="name-meaning">
+          Graceful, thoughtful, and quietly bright.
+        </p>
+
+        <div class="name-details">
+          <div class="name-detail">
+            <span class="detail-label">FAMILY NAME</span>
+            <strong id="familyNameDetail">김 · Kim</strong>
+          </div>
+
+          <div class="name-detail">
+            <span class="detail-label">GIVEN NAME</span>
+            <strong id="givenNameDetail">서윤 · Seo-yoon</strong>
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <button type="button" id="againButton" class="again-button">
+            Try Another Name
+          </button>
+          <button type="button" id="copyButton" class="copy-button">
+            Copy Name
+          </button>
+        </div>
+
+      </div>
+
+
+      <aside class="inspired-panel">
+
+        <p class="inspired-heading">
+          INSPIRED BY
+        </p>
+
+        <div class="inspired-item">
+          <span class="inspired-icon">▣</span>
+          <span id="birthdayResult">May 20, 1998</span>
+        </div>
+
+        <div class="inspired-item">
+          <span class="inspired-icon">♙</span>
+          <span id="genderResult">Female</span>
+        </div>
+
+        <div class="inspired-item">
+          <span class="inspired-icon">✧</span>
+          <span id="styleResult">Modern</span>
+        </div>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

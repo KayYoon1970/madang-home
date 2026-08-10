@@ -1,0 +1,251 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f6f6f6;
+    color:#222;
+    line-height:1.7;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:white;
+}
+
+.eyebrow{
+    color:#888;
+    letter-spacing:2px;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.hero-subtitle{
+    font-size:22px;
+    color:#555;
+    margin-bottom:35px;
+}
+
+.start-button{
+    display:inline-block;
+    background:#111;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:40px;
+    font-weight:bold;
+}
+
+.debate-container{
+    width:90%;
+    max-width:900px;
+    margin:60px auto;
+}
+
+.debate-card{
+    background:white;
+    padding:40px;
+    border-radius:18px;
+    margin-bottom:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.debate-number{
+    color:#999;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+.debate-icon{
+    font-size:48px;
+    margin:20px 0;
+}
+
+.debate-card h2{
+    font-size:34px;
+    margin-bottom:18px;
+}
+
+.debate-question{
+    color:#555;
+    margin-bottom:30px;
+}
+
+.vote-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.vote-button{
+    flex:1;
+    min-width:220px;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    background:#111;
+    color:white;
+    cursor:pointer;
+    font-size:17px;
+    transition:.25s;
+}
+
+.vote-button:hover{
+    transform:translateY(-3px);
+}
+
+.vote-result{
+    margin-top:25px;
+    color:#888;
+    font-weight:bold;
+}
+
+.culture-section{
+    background:white;
+    margin-top:70px;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.culture-section h2{
+    font-size:38px;
+    margin:20px 0;
+}
+
+.culture-section p{
+    max-width:800px;
+    margin:20px auto;
+    color:#555;
+}
+
+.footer{
+    text-align:center;
+    padding:50px 20px;
+    color:#888;
+}
+.debate-image{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:16px;
+    margin:20px 0 30px 0;
+}
+/* 글자 크기 전체 보정 */
+
+.eyebrow {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: 68px;
+}
+
+.hero-subtitle {
+    font-size: 30px;
+    line-height: 1.6;
+}
+
+.start-button {
+    font-size: 20px;
+    padding: 18px 42px;
+}
+
+.debate-number {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.debate-card h2 {
+    font-size: 42px;
+    line-height: 1.3;
+}
+
+.debate-question {
+    font-size: 24px;
+    line-height: 1.8;
+    color: #3f3f3f;
+}
+
+.vote-button {
+    font-size: 21px;
+    padding: 20px;
+}
+
+.vote-result {
+    font-size: 21px;
+}
+
+.culture-section h2 {
+    font-size: 44px;
+}
+
+.culture-section p {
+    font-size: 23px;
+}
+
+.footer {
+    font-size: 19px;
+}
+
+/* 모바일 글자 크기 */
+
+@media (max-width: 700px) {
+    .eyebrow {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero-subtitle {
+        font-size: 23px;
+    }
+
+    .start-button {
+        font-size: 18px;
+    }
+
+    .debate-number {
+        font-size: 16px;
+    }
+
+    .debate-card h2 {
+        font-size: 34px;
+    }
+
+    .debate-question {
+        font-size: 20px;
+        line-height: 1.7;
+    }
+
+    .vote-button {
+        font-size: 19px;
+    }
+
+    .vote-result {
+        font-size: 18px;
+    }
+
+    .culture-section h2 {
+        font-size: 34px;
+    }
+
+    .culture-section p {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Korean Debates | Which Side Are You On?</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header class="hero">
+    <p class="eyebrow">MADANG · KOREAN CULTURE</p>
+
+    <h1>Korean Debates</h1>
+
+    <p class="hero-subtitle">
+      Five questions that divide Korea.
+      <br />
+      Which side are you on?
+    </p>
+
+    <a href="#debates" class="start-button">
+      Start Voting
+    </a>
+  </header>
+
+
+  <main id="debates" class="debate-container">
+
+    <!-- Debate 1 -->
+    <section class="debate-card">
+      <div class="debate-number">DEBATE 01</div>
+
+      <img src="images/shrimp.jpg" class="debate-image" alt="Shrimp Debate">
+
+      <h2>Peeling Shrimp</h2>
+
+      <p class="debate-question">
+        Your partner peels shrimp for someone of the opposite sex.
+        Is it simple kindness, or does it cross a line?
+      </p>
+
+      <div class="vote-buttons">
+        <button class="vote-button" data-debate="shrimp" data-choice="red-flag">
+          🚩 Red Flag
+        </button>
+
+        <button class="vote-button" data-debate="shrimp" data-choice="not-red-flag">
+          Not a Red Flag
+        </button>
+      </div>
+
+      <p class="vote-result" id="shrimp-result">
+        Choose your side.
+      </p>
+    </section>
+
+
+    <!-- Debate 2 -->
+    <section class="debate-card">
+      <div class="debate-number">DEBATE 02</div>
+
+<img src="images/perilla.jpg" class="debate-image" alt="Perilla Debate">
+
+      <h2>The Perilla Leaf</h2>
+
+      <p class="debate-question">
+        Someone of the opposite sex cannot separate two stuck perilla leaves.
+
+Your partner helps them using their own chopsticks.
+
+Helpful gesture, or too intimate?
+      </p>
+
+      <div class="vote-buttons">
+        <button class="vote-button" data-debate="perilla" data-choice="red-flag">
+          🚩 Red Flag
+        </button>
+
+        <button class="vote-button" data-debate="perilla" data-choice="not-red-flag">
+          Not a Red Flag
+        </button>
+      </div>
+
+      <p class="vote-result" id="perilla-result">
+        Choose your side.
+      </p>
+    </section>
+
+
+    <!-- Debate 3 -->
+    <section class="debate-card">
+      <div class="debate-number">DEBATE 03</div>
+
+      <img src="images/coat.jpg" class="debate-image" alt="Coat Debate">
+
+      <h2>The Coat Zipper</h2>
+
+      <p class="debate-question">
+        Your partner notices that someone of the opposite sex has a stuck zipper
+and reaches over to zip up their coat.
+
+Everyday kindness, or too close for comfort?
+      </p>
+
+      <div class="vote-buttons">
+        <button class="vote-button" data-debate="zipper" data-choice="red-flag">
+          🚩 Red Flag
+        </button>
+
+        <button class="vote-button" data-debate="zipper" data-choice="not-red-flag">
+          Not a Red Flag
+        </button>
+      </div>
+
+      <p class="vote-result" id="zipper-result">
+        Choose your side.
+      </p>
+    </section>
+
+
+    <!-- Debate 4 -->   
+<section class="debate-card">
+    <div class="debate-number">DEBATE 04</div>
+
+    <img src="images/tangsuyuk.jpg" class="debate-image" alt="Tangsuyuk">
+
+    <h2>Tangsuyuk: Pour or Dip?</h2>
+
+    <p class="debate-question">
+        Tangsuyuk is a popular Korean-Chinese dish made with crispy fried pork
+        and served with a sweet and sour sauce.
+        <br><br>
+        Some people pour the sauce over the entire dish, making every bite juicy
+        and flavorful.
+        Others prefer to dip each piece into the sauce to keep the crispy texture.
+        <br><br>
+        Which side are you on?
+    </p>
+
+    <div class="vote-buttons">
+        <button class="vote-button"
+                data-debate="tangsuyuk"
+                data-choice="pour">
+            Pour the Sauce
+        </button>
+
+        <button class="vote-button"
+                data-debate="tangsuyuk"
+                data-choice="dip">
+            Dip the Sauce
+        </button>
+    </div>
+
+    <p class="vote-result" id="tangsuyuk-result">
+        Choose your side.
+    </p>
+</section>
+
+    <!-- Debate 5 -->
+    <section class="debate-card">
+      <div class="debate-number">DEBATE 05</div>
+
+      <img src="images/coffee.png" class="debate-image" alt="Hot vs Iced Americano">
+
+      <h2>Iced or Hot Americano?</h2>
+
+      <p class="debate-question">
+        Even in freezing winter, many Koreans still order iced coffee.
+        Are you team Eoljukah or team hot coffee?
+      </p>
+
+      <div class="vote-buttons">
+        <button class="vote-button" data-debate="coffee" data-choice="iced">
+          🧊 Iced Americano
+        </button>
+
+        <button class="vote-button" data-debate="coffee" data-choice="hot">
+          🔥 Hot Americano
+        </button>
+      </div>
+
+      <p class="vote-result" id="coffee-result">
+        Choose your side.
+      </p>
+    </section>
+
+  </main>
+
+
+  <section class="culture-section">
+    <p class="eyebrow">WHY THESE DEBATES MATTER</p>
+
+    <h2>Small choices. Big cultural clues.</h2>
+
+    <p>
+      These debates may look playful, but they reveal how Koreans think
+      about relationships, boundaries, food preferences, seasons,
+      and everyday social rules.
+    </p>
+
+    <p>
+      There is no single correct answer.
+      That is exactly why the arguments never end.
+    </p>
+  </section>
+
+
+  <footer class="footer">
+    <p>MADANG · Real Korea, one debate at a time.</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
