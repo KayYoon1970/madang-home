@@ -72,41 +72,32 @@ function getPostText(entry) {
 }
 
 function getStoryCategory(entry) {
-  const title = (entry.title?.$t || '').toLowerCase();
   const labels = (entry.category || [])
-    .map(item => item.term.toLowerCase())
+    .map(item => item.term.toLowerCase().trim())
     .filter(Boolean);
-  const labelText = labels.join(' ');
 
-  // Keep the three published stories in their intended MADANG categories,
-  // even when older Blogger labels overlap.
-  if (title.includes('hot outside') || title.includes('ice-cold') || title.includes('drink in summer')) {
+  if (labels.includes('food & drink')) {
     return { label: 'Food & Drink', filter: 'food' };
   }
 
-  if (title.includes('highway rest stop') || title.includes('rest stops are worth')) {
+  if (labels.includes('culture')) {
     return { label: 'Culture', filter: 'culture' };
   }
 
-  if (title.includes('moment above the east sea') || title.includes('naksansa')) {
+  if (labels.includes('travel')) {
     return { label: 'Travel', filter: 'travel' };
   }
 
-  if (labelText.includes('food') || labelText.includes('drink')) {
-    return { label: 'Food & Drink', filter: 'food' };
-  }
-  if (labelText.includes('culture')) return { label: 'Culture', filter: 'culture' };
-  if (labelText.includes('travel')) return { label: 'Travel', filter: 'travel' };
-  if (labelText.includes('k-vibe') || labelText.includes('kvibe')) {
+  if (labels.includes('k-vibe')) {
     return { label: 'K-Vibe', filter: 'kvibe' };
   }
-  if (labelText.includes('local life') || labelText.includes('local')) {
+
+  if (labels.includes('local life')) {
     return { label: 'Local Life', filter: 'local' };
   }
 
-  return { label: 'Local Life', filter: 'local' };
+  return { label: 'Uncategorized', filter: 'uncategorized' };
 }
-
 function getPostCategory(entry) {
   return getStoryCategory(entry).label;
 }
@@ -213,9 +204,10 @@ window.renderBloggerFeed = function renderBloggerFeed(feedData) {
 
   const homeFeed = document.getElementById('home-blog-feed');
   if (homeFeed && entries.length) {
-    homeFeed.innerHTML = entries.slice(0, 3).map(createHomeCard).join('');
+    homeFeed.innerHTML = entries.slice(0, 6).map(createHomeCard).join('');
   }
-
+const storyCount = document.getElementById('story-count');
+if (storyCount) storyCount.textContent = entries.length;
   const allFeed = document.getElementById('all-blog-feed');
   if (allFeed && entries.length) {
     allFeed.innerHTML = entries.map(createStoriesPageCard).join('');

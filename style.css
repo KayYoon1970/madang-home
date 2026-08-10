@@ -1653,10 +1653,16 @@ margin:15px 0 30px;
   justify-content: flex-start !important;
   text-align: left !important;
 }
-
 #stories .stories-copy .eyebrow,
 #tools .section-title .eyebrow {
   margin: 0 0 16px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+}
+.story-count {
+  font-size: 18px !important;
+  font-weight: 700 !important;
 }
 
 /* Disable the old pseudo-button and use the real button in HTML. */
