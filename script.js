@@ -119,7 +119,7 @@ function formatDate(value) {
 
 function createHomeCard(entry) {
   const title = entry.title?.$t || 'Real Korea with Flo';
-  const description = shorten(getPostText(entry), 125);
+  
   const category = getPostCategory(entry);
   const url = getPostUrl(entry);
   const image = getPostImage(entry);
@@ -135,7 +135,7 @@ function createHomeCard(entry) {
       <div class="story-body">
 <div class="story-category">${escapeHtml(category)}</div>
         <h3>${escapeHtml(title)}</h3>
-        <p>${escapeHtml(description)}</p>
+        
         <small>${escapeHtml(date)}</small>
         <a class="home-story-link"
            href="${escapeHtml(url)}"
@@ -204,7 +204,7 @@ window.renderBloggerFeed = function renderBloggerFeed(feedData) {
 
   const homeFeed = document.getElementById('home-blog-feed');
   if (homeFeed && entries.length) {
-    homeFeed.innerHTML = entries.slice(0, 6).map(createHomeCard).join('');
+    homeFeed.innerHTML = entries.slice(0, 9).map(createHomeCard).join('');
   }
 const storyCount = document.getElementById('story-count');
 if (storyCount) storyCount.textContent = entries.length;
