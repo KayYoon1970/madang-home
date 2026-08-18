@@ -1,5 +1,5 @@
 :root{
-  --ivory:#f5f1e8;
+--ivory:#f5f1e8;
   --paper:#faf8f2;
   --green:#0d2f27;
   --burgundy:#5b0c20;
@@ -1947,11 +1947,25 @@ margin:15px 0 30px;
     overflow-wrap: anywhere;
   }
 }
-.story-category{
-    font-size:11px;
-    color:#8f8f8f;
-    letter-spacing:0.12em;
-    font-weight:600;
-    text-transform:uppercase;
-    margin-bottom:10px;
+/* MADANG BACKGROUND + CARDS - FINAL */
+
+/* 전체 배경 */
+html,
+body,
+main,
+section,
+#stories,
+#tools {
+    background-color: #f5f1e8 !important;
+}
+
+/* 스토리 카드 + 미니 페이지 카드 */
+#home-blog-feed .story-card,
+#tools .tool-card {
+    background-color: #e8e0d2 !important;
+}
+
+/* 헤더 */
+.site-header {
+    background-color: #faf8f2 !important;
 }
