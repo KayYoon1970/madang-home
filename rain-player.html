@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  #rainButton {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+    padding: 8px 12px;
+    user-select: none;
+  }
+
+  #rainButton:hover {
+    color: #222;
+  }
+</style>
+</head>
+
+<body>
+
+<div id="rainButton" onclick="toggleRain()">
+  ☔ Let the rain play while you read.
+</div>
+
+<audio id="rainAudio">
+  <source src="assets/dragon-studio-gentle-rain-07-437321.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function toggleRain() {
+  const audio = document.getElementById("rainAudio");
+  const button = document.getElementById("rainButton");
+
+  if (audio.paused) {
+    audio.play();
+    button.innerHTML = "⏸ Pause the rain";
+  } else {
+    audio.pause();
+    button.innerHTML = "☔ Let the rain play while you read.";
+  }
+}
+
+document.getElementById("rainAudio").addEventListener("ended", function() {
+  document.getElementById("rainButton").innerHTML =
+    "☔ Let the rain play while you read.";
+});
+</script>
+
+</body>
+</html>
